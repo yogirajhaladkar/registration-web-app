@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+
+
+    <form onsubmit="loginUser(event)">
+
+        <h1>Login</h1>
+
+        <div>
+            <h3>Username</h3>
+            <input type="text" name="username" required>
+        </div>
+
+        <div>
+            <h3>Password</h3>
+            <input type="password" name="password" required>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <p>Don't have account? <a href="Register.html">Register</a></p>
+    </form>
+</div>
+
+
+<script>
+async function loginUser(event) {
+
+    
+    event.preventDefault();
+
+    let username = document.querySelector("input[name='username']").value;
+    let password = document.querySelector("input[name='password']").value;
+
+    try {
+        const response = await fetch("http://127.0.0.1:8000/login", {
+            method: "POST", 
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Login successful!");
+        } else {
+            alert(data.detail);
+        }
+
+    } catch (error) {
+        alert("Server not reachable");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+*{
+    color : #555555
+}
+h1{
+    color : green ;
+}
+body{
+    background-color: rgb(241, 210, 184);
+}
+button{
+    font-weight: bolder;
+    color : #555555;
+    background-color : #4A90E2;   
+}
+button{
+   
+}
+*{
+    text-align: center;
+    font-family: cursive;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(241, 210, 184);
+
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+}
+
+.form-container  {
+    background-color: rgb(243, 152, 152);
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-page  {
+    background-color: rgb(243, 152, 152);
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-container {
+    background-color: rgb(243, 152, 152);
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    
+
+    padding: 10px 18px;
+    background-color: rgb(241, 210, 184);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
